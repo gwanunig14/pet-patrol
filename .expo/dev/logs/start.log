@@ -546,3 +546,4 @@
 {"_e":"metro:bundling:started","_t":1783446123990,"id":"21","platform":"web","environment":null,"entry":"src/components/bookingForm.tsx"}
 {"_e":"metro:bundling:started","_t":1783446175974,"id":"22","platform":"web","environment":null,"entry":"src/components/bookingForm.tsx"}
 {"_e":"metro:bundling:started","_t":1783446288108,"id":"23","platform":"web","environment":null,"entry":"src/components/bookingForm.tsx"}
+{"_e":"metro:bundling:started","_t":1783446567589,"id":"24","platform":"web","environment":null,"entry":"src/app/_layout.tsx"}
