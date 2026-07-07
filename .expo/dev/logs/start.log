@@ -547,3 +547,40 @@
 {"_e":"metro:bundling:started","_t":1783446175974,"id":"22","platform":"web","environment":null,"entry":"src/components/bookingForm.tsx"}
 {"_e":"metro:bundling:started","_t":1783446288108,"id":"23","platform":"web","environment":null,"entry":"src/components/bookingForm.tsx"}
 {"_e":"metro:bundling:started","_t":1783446567589,"id":"24","platform":"web","environment":null,"entry":"src/app/_layout.tsx"}
+{"_e":"root:init","_t":1783451825586,"format":"v0-jsonl","version":"57.0.6"}
+{"_e":"env:mode","_t":1783451825586,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1783451825588,"mode":"development","files":["../../../.env.local"],"env":{"EXPO_PUBLIC_API_URL":"http://localhost:3001"}}
+{"_e":"devserver:start","_t":1783451826035,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../src/app","serverComponents":false,"serverActions":false,"serverRendering":true,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1783451826197,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":true,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1783451826290,"plugins":[]}
+{"_e":"metro:instantiate","_t":1783451826477,"atlas":false,"workers":8,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1783451829404,"id":"2","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:started","_t":1783451829404,"id":"3","platform":"web","environment":"node","entry":"node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js"}
+{"_e":"metro:bundling:done","_t":1783451830025,"id":"3","total":1053,"ms":621.182083}
+{"_e":"metro:bundling:done","_t":1783451830216,"id":"2","total":867,"ms":812.44825}
+{"_e":"metro:bundling:started","_t":1783451830237,"id":"4","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:started","_t":1783451830249,"id":"6","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:started","_t":1783451830249,"id":"7","platform":"web","environment":"node","entry":"node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js"}
+{"_e":"metro:bundling:done","_t":1783451830259,"id":"7","total":1,"ms":10.15425}
+{"_e":"metro:bundling:done","_t":1783451830354,"id":"6","total":1,"ms":104.6695}
+{"_e":"metro:bundling:done","_t":1783451830454,"id":"4","total":778,"ms":216.642042}
+{"_e":"metro:client_log","_t":1783451830605,"level":"info","data":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"]}
+{"_e":"metro:client_log","_t":1783451830605,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:bundling:started","_t":1783451928395,"id":"a","platform":"web","environment":null,"entry":"src/components/bookingFormView.tsx"}
+{"_e":"metro:bundling:started","_t":1783451959109,"id":"b","platform":"web","environment":null,"entry":"src/components/bookingFormView.tsx"}
+{"_e":"metro:bundling:started","_t":1783451964287,"id":"d","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:started","_t":1783451964287,"id":"e","platform":"web","environment":"node","entry":"node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js"}
+{"_e":"metro:bundling:done","_t":1783451964358,"id":"e","total":1,"ms":71.17775}
+{"_e":"metro:bundling:done","_t":1783451964494,"id":"d","total":1,"ms":207.456875}
+{"_e":"metro:bundling:started","_t":1783451964510,"id":"f","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:done","_t":1783451964548,"id":"f","total":1,"ms":37.024209}
+{"_e":"metro:bundling:started","_t":1783451964556,"id":"h","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:started","_t":1783451964556,"id":"i","platform":"web","environment":"node","entry":"node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js"}
+{"_e":"metro:bundling:done","_t":1783451964565,"id":"i","total":1,"ms":9.408875}
+{"_e":"metro:bundling:done","_t":1783451964630,"id":"h","total":1,"ms":73.755375}
+{"_e":"metro:client_log","_t":1783451964735,"level":"info","data":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"]}
+{"_e":"metro:client_log","_t":1783451964735,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:bundling:started","_t":1783452020048,"id":"l","platform":"web","environment":null,"entry":"src/app/OwnerPage.tsx"}
+{"_e":"metro:bundling:started","_t":1783452027540,"id":"n","platform":"web","environment":null,"entry":"src/app/SitterPage.tsx"}
+{"_e":"metro:client_log","_t":1783452027570,"level":"warn","data":["Route \"./SitterPage.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:bundling:started","_t":1783452059357,"id":"p","platform":"web","environment":null,"entry":"src/app/index.tsx"}

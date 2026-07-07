@@ -1,5 +1,6 @@
 import { Booking, getBookingsByUser } from "@/api/bookings";
-import BookingForm from "@/components/bookingForm";
+import AppointmentView from "@/components/appointmentView";
+import BookingForm from "@/components/bookingFormView";
 import { useAuth } from "@/context/auth-context";
 import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
@@ -37,7 +38,9 @@ export default function OwnerView() {
       <Text>Owner View</Text>
       <Text>{currentUser?.name}</Text>
       <Button title="Log Out" onPress={logOut} />
-      <View></View>
+      <View>
+        <AppointmentView />
+      </View>
       <View>
         <BookingForm />
       </View>

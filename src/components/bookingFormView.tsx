@@ -128,6 +128,10 @@ export default function BookingForm() {
   }, [animal, lengthHours, priceList]);
 
   const submitRequest = () => {
+    if (!petName) {
+      setError("No Name");
+      return;
+    }
     if (startTimeOptions.length === 0) {
       setError("No valid start times available for this date");
       return;

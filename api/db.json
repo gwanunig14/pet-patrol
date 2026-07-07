@@ -21,7 +21,7 @@
   "bookings": [
     {
       "owner": "owner1",
-      "petName": "",
+      "petName": "Fido",
       "price": 40,
       "date": "2026-07-08T04:00:00.000Z",
       "startTime": "2026-07-09T00:00:00.000Z",
