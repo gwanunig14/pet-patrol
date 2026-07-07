@@ -18,7 +18,9 @@ export default function HomeScreen() {
       setCurrentUser(fetchedUser);
 
       if (fetchedUser.name !== "sitter") {
-        router.replace("/OwnerView");
+        router.replace("/OwnerPage");
+      } else {
+        router.replace("/SitterPage");
       }
     } catch (err) {
       setCurrentUser(null);
