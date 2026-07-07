@@ -1,0 +1,13 @@
+{
+  "users": {
+    "owner1": { "name": "owner1", "password": "12345" },
+    "onwer2": { "name": "owner2", "password": "23456" },
+    "sitter": { "name": "sitter", "password": "abcde" }
+  },
+  "pets": {
+    "pig": { "price": "20" },
+    "dog": { "price": "10" },
+    "cat": { "price": "5" }
+  },
+  "bookings": {}
+}

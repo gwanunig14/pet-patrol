@@ -142,3 +142,93 @@
 {"_e":"metro:bundling:done","_t":1783428384086,"id":"l","total":1,"ms":26.177292}
 {"_e":"metro:client_log","_t":1783428384213,"level":"info","data":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"]}
 {"_e":"metro:client_log","_t":1783428384213,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:bundling:failed","_t":1783429686920,"id":null,"message":"SyntaxError: /Users/tjmercer/Desktop/Pet Patrol/pet-patrol/src/app/index.tsx: Unexpected token (12:6)\n\n  10 |       <TextInput placeholder=\"Username\" onChangeText={(t) => setUsername(t)} />\n  11 |         <TextInput placeholder=\"Password\" onChangeText={t=> setPassword(t)}\n> 12 |       <Button title=\"Log In\" />\n     |       ^\n  13 |     </div>\n  14 |   );\n  15 | }","importStack":null,"filename":"src/app/index.tsx","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:client_log","_t":1783429686922,"level":"error","data":["[TransformError: SyntaxError: /Users/tjmercer/Desktop/Pet Patrol/pet-patrol/src/app/index.tsx: Unexpected token (12:6)\n\n  10 |       <TextInput placeholder=\"Username\" onChangeText={(t) => setUsername(t)} />\n  11 |         <TextInput placeholder=\"Password\" onChangeText={t=> setPassword(t)}\n> 12 |       <Button title=\"Log In\" />\n     |       ^\n  13 |     </div>\n  14 |   );\n  15 | }]"]}
+{"_e":"metro:bundling:failed","_t":1783429687916,"id":null,"message":"SyntaxError: /Users/tjmercer/Desktop/Pet Patrol/pet-patrol/src/app/index.tsx: Unexpected token (12:6)\n\n  10 |       <TextInput placeholder=\"Username\" onChangeText={(t) => setUsername(t)} />\n  11 |         <TextInput placeholder=\"Password\" onChangeText={t=> setPassword(t)}\n> 12 |       <Button title=\"Log In\" />\n     |       ^\n  13 |     </div>\n  14 |   );\n  15 | }","importStack":null,"filename":"src/app/index.tsx","targetModuleName":null,"originModulePath":null}
+{"_e":"metro:client_log","_t":1783429687917,"level":"error","data":["[TransformError: SyntaxError: /Users/tjmercer/Desktop/Pet Patrol/pet-patrol/src/app/index.tsx: Unexpected token (12:6)\n\n  10 |       <TextInput placeholder=\"Username\" onChangeText={(t) => setUsername(t)} />\n  11 |         <TextInput placeholder=\"Password\" onChangeText={t=> setPassword(t)}\n> 12 |       <Button title=\"Log In\" />\n     |       ^\n  13 |     </div>\n  14 |   );\n  15 | }]"]}
+{"_e":"metro:client_log","_t":1783431444858,"level":"error","data":["[TypeError: Failed to fetch]","\n\n\u001b[1mCode: user.ts\u001b[22m\n\u001b[0m \u001b[90m  7 |\u001b[39m\n \u001b[90m  8 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m getUser(user\u001b[33m:\u001b[39m \u001b[33mUser\u001b[39m)\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[33mUser\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m fetch(\u001b[32m`${API_URL}/users/${user.name}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) {\n \u001b[90m 12 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Could not load pets: ${response.status}`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  getUser (src/api/user.ts:9:26)\u001b[39m\n\u001b[90m  logIn (src/app/index.tsx:12:38)\u001b[39m"]}
+{"_e":"metro:bundling:started","_t":1783431464352,"id":"w","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:progress","_t":1783431464352,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:started","_t":1783431464352,"id":"x","platform":"web","environment":"node","entry":"node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js"}
+{"_e":"metro:bundling:progress","_t":1783431464352,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464352,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464355,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464355,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464455,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464455,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:started","_t":1783431464482,"id":"y","platform":"web","environment":null,"entry":"src/app/_layout.tsx"}
+{"_e":"metro:bundling:progress","_t":1783431464482,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464482,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:started","_t":1783431464486,"id":"10","platform":"web","environment":null,"entry":"src/app/index.tsx"}
+{"_e":"metro:bundling:progress","_t":1783431464486,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464486,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464486,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464486,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:started","_t":1783431464487,"id":"11","platform":"web","environment":null,"entry":"src/api/user.ts"}
+{"_e":"metro:bundling:progress","_t":1783431464487,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464487,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464487,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464487,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464556,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464556,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464564,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464564,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464664,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464664,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464764,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464764,"id":"x","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1783431464846,"id":"x","total":1,"ms":493.997708}
+{"_e":"metro:bundling:progress","_t":1783431464846,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464959,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:started","_t":1783431464960,"id":"14","platform":"web","environment":null,"entry":"src/app/index.tsx"}
+{"_e":"metro:bundling:progress","_t":1783431464960,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464960,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:started","_t":1783431464962,"id":"15","platform":"web","environment":null,"entry":"src/app/index.tsx"}
+{"_e":"metro:bundling:progress","_t":1783431464962,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464962,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:started","_t":1783431464963,"id":"16","platform":"web","environment":null,"entry":"src/app/index.tsx"}
+{"_e":"metro:bundling:progress","_t":1783431464963,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464964,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464964,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:started","_t":1783431464980,"id":"17","platform":"web","environment":null,"entry":"src/app/index.tsx"}
+{"_e":"metro:bundling:progress","_t":1783431464980,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464980,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:started","_t":1783431464980,"id":"18","platform":"web","environment":null,"entry":"src/app/_layout.tsx"}
+{"_e":"metro:bundling:progress","_t":1783431464980,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464980,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:started","_t":1783431464982,"id":"19","platform":"web","environment":null,"entry":"src/app/index.tsx"}
+{"_e":"metro:bundling:progress","_t":1783431464982,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464983,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:started","_t":1783431464983,"id":"1a","platform":"web","environment":null,"entry":"src/app/_layout.tsx"}
+{"_e":"metro:bundling:progress","_t":1783431464983,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783431464983,"id":"w","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1783431464984,"id":"w","total":1,"ms":632.164375}
+{"_e":"metro:bundling:started","_t":1783431464989,"id":"1b","platform":"web","environment":null,"entry":"src/app/index.tsx"}
+{"_e":"metro:bundling:started","_t":1783431464990,"id":"1c","platform":"web","environment":null,"entry":"src/app/index.tsx"}
+{"_e":"metro:bundling:started","_t":1783431464991,"id":"1d","platform":"web","environment":null,"entry":"src/app/index.tsx"}
+{"_e":"metro:bundling:started","_t":1783431464991,"id":"1e","platform":"web","environment":null,"entry":"src/app/index.tsx"}
+{"_e":"metro:bundling:started","_t":1783431464992,"id":"1f","platform":"web","environment":null,"entry":"src/app/index.tsx"}
+{"_e":"metro:bundling:started","_t":1783431464993,"id":"1g","platform":"web","environment":null,"entry":"src/app/index.tsx"}
+{"_e":"metro:client_log","_t":1783431467521,"level":"error","data":["[TypeError: Failed to fetch]","\n\n\u001b[1mCode: user.ts\u001b[22m\n\u001b[0m \u001b[90m  7 |\u001b[39m\n \u001b[90m  8 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m getUser(user\u001b[33m:\u001b[39m \u001b[33mUser\u001b[39m)\u001b[33m:\u001b[39m \u001b[33mPromise\u001b[39m\u001b[33m<\u001b[39m\u001b[33mUser\u001b[39m\u001b[33m>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   \u001b[36mconst\u001b[39m response \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m fetch(\u001b[32m`${API_URL}/users/${user.name}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) {\n \u001b[90m 12 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Could not load pets: ${response.status}`\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  getUser (src/api/user.ts:9:26)\u001b[39m\n\u001b[90m  logIn (src/app/index.tsx:12:38)\u001b[39m"]}
+{"_e":"root:init","_t":1783431529810,"format":"v0-jsonl","version":"57.0.6"}
+{"_e":"env:mode","_t":1783431529810,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1783431529812,"mode":"development","files":["../../../.env.local"],"env":{"EXPO_PUBLIC_API_URL":"http://localhost:3001"}}
+{"_e":"devserver:start","_t":1783431530259,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../src/app","serverComponents":false,"serverActions":false,"serverRendering":true,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1783431530421,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":true,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1783431530505,"plugins":[]}
+{"_e":"metro:instantiate","_t":1783431530679,"atlas":false,"workers":8,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1783431603165,"id":"5","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:started","_t":1783431603165,"id":"6","platform":"web","environment":"node","entry":"node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js"}
+{"_e":"metro:bundling:done","_t":1783431603614,"id":"6","total":853,"ms":448.441666}
+{"_e":"metro:bundling:done","_t":1783431603757,"id":"5","total":778,"ms":592.186167}
+{"_e":"metro:bundling:started","_t":1783431603782,"id":"7","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:started","_t":1783431603834,"id":"9","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:started","_t":1783431603834,"id":"a","platform":"web","environment":"node","entry":"node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js"}
+{"_e":"metro:bundling:done","_t":1783431603843,"id":"a","total":1,"ms":8.68375}
+{"_e":"metro:bundling:done","_t":1783431603942,"id":"9","total":1,"ms":107.909459}
+{"_e":"metro:bundling:done","_t":1783431603997,"id":"7","total":449,"ms":214.329333}
+{"_e":"metro:client_log","_t":1783431604126,"level":"info","data":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"]}
+{"_e":"metro:client_log","_t":1783431604127,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1783431609466,"level":"error","data":["[Error: Could not load users: 404]","\n\n\u001b[1mCode: user.ts\u001b[22m\n\u001b[0m \u001b[90m 10 |\u001b[39m\n \u001b[90m 11 |\u001b[39m   \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mresponse\u001b[33m.\u001b[39mok) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 12 |\u001b[39m     \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m`Could not load users: ${response.status}`\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 13 |\u001b[39m   }\n \u001b[90m 14 |\u001b[39m\n \u001b[90m 15 |\u001b[39m   \u001b[36mconst\u001b[39m currentUser\u001b[33m:\u001b[39m \u001b[33mUser\u001b[39m \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m response\u001b[33m.\u001b[39mjson()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  getUser (src/api/user.ts:12:11)\u001b[39m\n\u001b[90m  logIn (src/app/index.tsx:12:25)\u001b[39m"]}
+{"_e":"metro:bundling:started","_t":1783431726831,"id":"g","platform":"web","environment":null,"entry":"src/api/user.ts"}
+{"_e":"metro:bundling:started","_t":1783431739287,"id":"h","platform":"web","environment":null,"entry":"src/app/index.tsx"}
