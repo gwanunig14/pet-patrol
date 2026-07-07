@@ -1,12 +1,17 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from "expo-router";
+import { AuthProvider } from "@/context/auth-context";
+import { PaperProvider } from "react-native-paper";
+import { DarkTheme, DefaultTheme, Slot, ThemeProvider } from "expo-router";
 import { useColorScheme } from "react-native";
-import HomeScreen from ".";
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
   return (
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
-      <HomeScreen />
+      <AuthProvider>
+        <PaperProvider>
+          <Slot />
+        </PaperProvider>
+      </AuthProvider>
     </ThemeProvider>
   );
 }
