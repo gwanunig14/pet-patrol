@@ -126,7 +126,7 @@
       "startTime": "2026-07-23T06:30:00.000Z",
       "endTime": "2026-07-23T11:30:00.000Z",
       "animal": "dog",
-      "status": "Pending",
+      "status": "Declined",
       "id": "ugrTbKpwGrz"
     },
     {
@@ -137,7 +137,7 @@
       "startTime": "2026-08-05T10:30:00.000Z",
       "endTime": "2026-08-05T17:30:00.000Z",
       "animal": "dog",
-      "status": "Pending",
+      "status": "Accepted",
       "id": "UdHEFQxChZM"
     },
     {

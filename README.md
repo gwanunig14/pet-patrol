@@ -13,3 +13,5 @@ The following is my process in order
 7. I'm going to go through and simplifying the code.
 8. Time to make the log in view presentable
 9. Now for the Owner view
+10. Sitter view
+11. All done

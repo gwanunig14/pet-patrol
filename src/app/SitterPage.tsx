@@ -1,6 +1,7 @@
 import { Booking, getBookings, updateBookingStatus } from "@/api/bookings";
 import DateListView from "@/components/dateListView";
 import DayScheduleView from "@/components/dayScheduleView";
+import HeaderView from "@/components/headerView";
 import PendingBookingsView from "@/components/pendingBookingsView";
 import {
   atStartOfDay,
@@ -10,9 +11,7 @@ import {
   toDateKey,
 } from "@/functions/date";
 import { useEffect, useMemo, useState } from "react";
-import { Dimensions, Text, View } from "react-native";
-
-const SCREEN_HEIGHT = Dimensions.get("window").height;
+import { View } from "react-native";
 
 export default function SitterPage() {
   const dateOptions = useMemo((): DateOption[] => {
@@ -58,36 +57,32 @@ export default function SitterPage() {
   }, [bookings, selectedDate]);
 
   return (
-    <View style={{ flexDirection: "row", maxHeight: SCREEN_HEIGHT }}>
-      <View>
-        <DateListView
-          dateOptions={dateOptions}
-          setSelectedDate={setSelectedDate}
-        />
-      </View>
-      <View>
-        <Text>
-          {Intl.DateTimeFormat("en-us", {
-            weekday: "short",
-            month: "short",
-            day: "numeric",
-          }).format(new Date(selectedDate))}
-        </Text>
-        {dateBookings && (
-          <DayScheduleView
-            dateBookings={dateBookings}
-            selectedDate={selectedDate}
-          />
-        )}
-      </View>
-      <View>
-        {bookings && (
-          <PendingBookingsView
-            bookings={bookings}
-            setBookings={setBookings}
+    <View>
+      <HeaderView />
+      <View style={{ flexDirection: "row" }}>
+        <View>
+          <DateListView
+            dateOptions={dateOptions}
             setSelectedDate={setSelectedDate}
           />
-        )}
+        </View>
+        <View style={{ flex: 1 }}>
+          {dateBookings && (
+            <DayScheduleView
+              dateBookings={dateBookings}
+              selectedDate={selectedDate}
+            />
+          )}
+        </View>
+        <View>
+          {bookings && (
+            <PendingBookingsView
+              bookings={bookings}
+              setBookings={setBookings}
+              setSelectedDate={setSelectedDate}
+            />
+          )}
+        </View>
       </View>
     </View>
   );

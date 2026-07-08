@@ -24,6 +24,10 @@ import {
   toDateKey,
 } from "@/functions/date";
 
+export function capitalize(value: string): string {
+  return value.charAt(0).toUpperCase() + value.slice(1);
+}
+
 export default function BookingForm() {
   const { currentUser } = useAuth();
   if (!currentUser) return null;
@@ -126,10 +130,6 @@ export default function BookingForm() {
       status: "Pending",
     }).catch((e) => setError("Booking failed"));
   };
-
-  function capitalize(value: string): string {
-    return value.charAt(0).toUpperCase() + value.slice(1);
-  }
 
   return (
     <View style={styles.formView}>
