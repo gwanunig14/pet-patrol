@@ -4,7 +4,7 @@ import BookingForm from "@/components/bookingFormView";
 import { useAuth } from "@/context/auth-context";
 import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
-import { Button, Text, View } from "react-native";
+import { Button, Pressable, StyleSheet, Text, View } from "react-native";
 
 export default function OwnerView() {
   const { currentUser, setCurrentUser } = useAuth();
@@ -35,15 +35,52 @@ export default function OwnerView() {
 
   return (
     <View>
-      <Text>Owner View</Text>
-      <Text>{currentUser?.name}</Text>
-      <Button title="Log Out" onPress={logOut} />
-      <View>
-        <AppointmentView />
+      <View style={styles.header}>
+        <Text style={styles.headerTitle}>{currentUser?.name}</Text>
+        <Pressable style={styles.logout} onPress={logOut}>
+          <Text style={styles.logoutTitle}>Log Out</Text>
+        </Pressable>
       </View>
-      <View>
-        <BookingForm />
+      <View style={styles.bookingViews}>
+        <View style={styles.bookingsList}>
+          <AppointmentView />
+        </View>
+        <View style={styles.bookingForm}>
+          <BookingForm />
+        </View>
       </View>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  header: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 16,
+    width: "100%",
+    position: "relative",
+  },
+  headerTitle: {
+    textAlign: "center",
+    fontSize: 56,
+    color: "green",
+  },
+  logout: {
+    position: "absolute",
+    right: 16,
+  },
+  logoutTitle: {
+    fontSize: 20,
+    color: "white",
+    backgroundColor: "green",
+    padding: 16,
+    borderRadius: 8,
+  },
+  bookingViews: {
+    flexDirection: "row",
+  },
+  bookingsList: { padding: 16 },
+  bookingForm: { padding: 16 },
+});

@@ -10,3 +10,6 @@ The following is my process in order
 4. Fetch and display user's bookings.
 5. Owner page. I want it to list the bookings in a schedule format. Will use AI to generate a bunch of potential bookings just to give more datea to work with. AI was used for the date logic because that just gets confusing.
 6. Need to make everything pretty but first, Expo build creates a lot of files that I'm not using. So I'm going to tell AI to get rid of all of them.
+7. I'm going to go through and simplifying the code.
+8. Time to make the log in view presentable
+9. Now for the Owner view

@@ -2,7 +2,14 @@ import { Animals, createBooking } from "@/api/bookings";
 import { getPrices, Prices } from "@/api/prices";
 import { useAuth } from "@/context/auth-context";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Button, Text, TextInput, View } from "react-native";
+import {
+  Button,
+  Pressable,
+  StyleSheet,
+  Text,
+  TextInput,
+  View,
+} from "react-native";
 import { Picker } from "@react-native-picker/picker";
 import {
   atStartOfDay,
@@ -125,54 +132,133 @@ export default function BookingForm() {
   }
 
   return (
-    <View>
-      {error && <Text onPress={() => setError(null)}>{error}</Text>}
-      <TextInput placeholder="Pet Name" onChangeText={(t) => setPetName(t)} />
-      <Picker selectedValue={animal} onValueChange={(a) => setAnimal(a)}>
-        {Animals.map((a) => (
-          <Picker.Item key={a} label={capitalize(a)} value={a} />
-        ))}
-      </Picker>
-      <Text>Date</Text>
-      <Picker
-        selectedValue={selectedDateKey}
-        onValueChange={(value: string) => setSelectedDateKey(value)}
-      >
-        {dateOptions.map((option) => (
-          <Picker.Item
-            key={option.key}
-            label={option.label}
-            value={option.key}
-          />
-        ))}
-      </Picker>
-
-      <Text>Start Time</Text>
-      <Picker
-        selectedValue={startMinuteOfDay}
-        onValueChange={(value) => setStartMinuteOfDay(Number(value))}
-      >
-        {startTimeOptions.map((value) => (
-          <Picker.Item
-            key={value}
-            label={formatTimeLabel(value)}
-            value={value}
-          />
-        ))}
-      </Picker>
-
-      <Text>Number of Hours</Text>
-      <Picker
-        selectedValue={lengthHours}
-        onValueChange={(value) => setLengthHours(Number(value))}
-      >
-        {LENGTH_OPTIONS.map((hours) => (
-          <Picker.Item key={hours} label={String(hours)} value={hours} />
-        ))}
-      </Picker>
-      <Text>{`Total: $${price}`}</Text>
-      <Text>{`($20 for first 2 hours + $${priceList ? priceList[animal] : 10} for each additional ${animal} hour)`}</Text>
-      <Button title={"Submit Sitter Request"} onPress={submitRequest} />
+    <View style={styles.formView}>
+      {error && (
+        <Text style={styles.error} onPress={() => setError(null)}>
+          {error}
+        </Text>
+      )}
+      <TextInput
+        style={styles.petName}
+        placeholder="Pet Name"
+        onChangeText={(t) => setPetName(t)}
+      />
+      <View style={styles.formObject}>
+        <Text style={styles.formHeader}>Pet Species:</Text>
+        <Picker
+          style={styles.formDropdown}
+          selectedValue={animal}
+          onValueChange={(a) => setAnimal(a)}
+        >
+          {Animals.map((a) => (
+            <Picker.Item
+              style={styles.formDropdownItem}
+              key={a}
+              label={capitalize(a)}
+              value={a}
+            />
+          ))}
+        </Picker>
+      </View>
+      <View style={styles.formObject}>
+        <Text style={styles.formHeader}>Date Needed:</Text>
+        <Picker
+          style={styles.formDropdown}
+          selectedValue={selectedDateKey}
+          onValueChange={(value: string) => setSelectedDateKey(value)}
+        >
+          {dateOptions.map((option) => (
+            <Picker.Item
+              style={styles.formDropdownItem}
+              key={option.key}
+              label={option.label}
+              value={option.key}
+            />
+          ))}
+        </Picker>
+      </View>
+      <View style={styles.formObject}>
+        <Text style={styles.formHeader}>Start Time:</Text>
+        <Picker
+          style={styles.formDropdown}
+          selectedValue={startMinuteOfDay}
+          onValueChange={(value) => setStartMinuteOfDay(Number(value))}
+        >
+          {startTimeOptions.map((value) => (
+            <Picker.Item
+              style={styles.formDropdownItem}
+              key={value}
+              label={formatTimeLabel(value)}
+              value={value}
+            />
+          ))}
+        </Picker>
+      </View>
+      <View style={styles.formObject}>
+        <Text style={styles.formHeader}>Number of Hours:</Text>
+        <Picker
+          style={styles.formDropdown}
+          selectedValue={lengthHours}
+          onValueChange={(value) => setLengthHours(Number(value))}
+        >
+          {LENGTH_OPTIONS.map((hours) => (
+            <Picker.Item
+              style={styles.formDropdownItem}
+              key={hours}
+              label={String(hours)}
+              value={hours}
+            />
+          ))}
+        </Picker>
+      </View>
+      <Text style={styles.total}>{`Total: $${price}`}</Text>
+      <Text
+        style={styles.totalExplanation}
+      >{`($20 for first 2 hours + $${priceList ? priceList[animal] : 10} for each additional ${animal} hour)`}</Text>
+      <Pressable style={styles.submitButton} onPress={submitRequest}>
+        <Text style={styles.submitButtonTitle}>Submit Sitter Request</Text>
+      </Pressable>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  formView: { padding: 16, alignItems: "center" },
+  error: { fontSize: 24, color: "red" },
+  petName: {
+    borderColor: "green",
+    borderWidth: 2,
+    borderRadius: 8,
+    padding: 4,
+    width: 350,
+    fontSize: 24,
+    margin: 4,
+  },
+  formObject: {
+    margin: 4,
+    width: 350,
+    flexDirection: "row",
+    justifyContent: "center",
+  },
+  formHeader: { padding: 4, fontSize: 16 },
+  formDropdown: {
+    alignSelf: "flex-end",
+    flex: 1,
+    padding: 4,
+    fontSize: 16,
+    borderColor: "green",
+    borderRadius: 8,
+  },
+  formDropdownItem: {},
+  total: { fontSize: 32, textAlign: "left", width: "100%", padding: 8 },
+  totalExplanation: { padding: 8, maxWidth: 350, fontSize: 12 },
+  submitButton: {
+    padding: 16,
+    width: "100%",
+    margin: 8,
+    backgroundColor: "green",
+    borderRadius: 8,
+    alignItems: "center",
+  },
+  submitButtonTitle: { fontSize: 24, color: "white" },
+});
