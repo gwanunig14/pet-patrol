@@ -15,3 +15,5 @@ The following is my process in order
 9. Now for the Owner view
 10. Sitter view
 11. All done
+12. Had an idea to improve the scheduling view.
+13. Crap. I forgot the tests

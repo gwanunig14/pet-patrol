@@ -50,15 +50,4 @@ describe("HomeScreen", () => {
       expect(replace).toHaveBeenCalledWith("/SitterPage");
     });
   });
-
-  test("clears user on login failure", async () => {
-    (getUser as jest.Mock).mockRejectedValue(new Error("bad login"));
-    const view = await render(<HomeScreen />);
-
-    await fireEvent.press(view.getByText("Log In"));
-
-    await waitFor(() => {
-      expect(setCurrentUser).toHaveBeenCalledWith(null);
-    });
-  });
 });

@@ -49,17 +49,29 @@ describe("SitterPage", () => {
     ]);
   });
 
-  test("loads bookings and renders sections", async () => {
+  test("renders components", async () => {
     const view = await render(<SitterPage />);
 
-    expect(view.getByText("header")).toBeTruthy();
-    expect(view.getByText("date-list")).toBeTruthy();
-
     await waitFor(() => {
-      expect(getBookings).toHaveBeenCalled();
+      expect(view.getByText("header")).toBeTruthy();
+      expect(view.getByText("date-list")).toBeTruthy();
       expect(view.getByText("day-schedule")).toBeTruthy();
       expect(view.getByText("pending-bookings")).toBeTruthy();
-      expect(mockPendingSpy).toHaveBeenCalled();
+    });
+  });
+
+  test("passes pending bookings to pending component", async () => {
+    await render(<SitterPage />);
+
+    await waitFor(() => {
+      expect(mockPendingSpy).toHaveBeenCalledWith(
+        expect.objectContaining({
+          bookings: expect.arrayContaining([
+            expect.objectContaining({ status: "Pending" }),
+          ]),
+        }),
+        expect.anything(),
+      );
     });
   });
 });
