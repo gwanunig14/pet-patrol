@@ -314,3 +314,37 @@
 {"_e":"metro:bundling:started","_t":1783473266938,"id":"8z","platform":"web","environment":null,"entry":"src/components/pendingBookingsView.tsx"}
 {"_e":"metro:bundling:started","_t":1783473272078,"id":"90","platform":"web","environment":null,"entry":"src/components/pendingBookingsView.tsx"}
 {"_e":"metro:bundling:started","_t":1783473284888,"id":"91","platform":"web","environment":null,"entry":"src/components/pendingBookingsView.tsx"}
+{"_e":"root:init","_t":1783516011790,"format":"v0-jsonl","version":"57.0.6"}
+{"_e":"env:mode","_t":1783516011791,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1783516011793,"mode":"development","files":["../../../.env.local"],"env":{"EXPO_PUBLIC_API_URL":"http://localhost:3001"}}
+{"_e":"devserver:start","_t":1783516012290,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../src/app","serverComponents":false,"serverActions":false,"serverRendering":true,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1783516012471,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":true,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1783516012567,"plugins":[]}
+{"_e":"metro:instantiate","_t":1783516012850,"atlas":false,"workers":8,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1783516407211,"id":"2","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:started","_t":1783516407212,"id":"3","platform":"web","environment":"node","entry":"node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js"}
+{"_e":"metro:bundling:done","_t":1783516408007,"id":"3","total":982,"ms":794.892917}
+{"_e":"metro:bundling:done","_t":1783516408233,"id":"2","total":874,"ms":1021.866083}
+{"_e":"metro:bundling:started","_t":1783516408247,"id":"4","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:done","_t":1783516408401,"id":"4","total":524,"ms":153.162167}
+{"_e":"metro:client_log","_t":1783516408516,"level":"info","data":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"]}
+{"_e":"metro:client_log","_t":1783516408516,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1783516408520,"level":"warn","data":["Require cycle: src/components/dayScheduleView.tsx -> src/components/bookingBlock.tsx -> src/components/dayScheduleView.tsx\n\nRequire cycles are allowed, but can result in uninitialized values. Consider refactoring to remove the need for a cycle."]}
+{"_e":"metro:client_log","_t":1783516420598,"level":"error","data":["\n\n\u001b[1mCode: dayScheduleView.tsx\u001b[22m\n\u001b[0m \u001b[90m 62 |\u001b[39m           {dateBookings\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mmap((db\u001b[33m,\u001b[39m i) \u001b[33m=>\u001b[39m {\n \u001b[90m 63 |\u001b[39m             \u001b[36mreturn\u001b[39m (\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 64 |\u001b[39m               \u001b[33m<\u001b[39m\u001b[33mBookingBlock\u001b[39m\n \u001b[90m    |\u001b[39m               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 65 |\u001b[39m                 booking\u001b[33m=\u001b[39m{db}\n \u001b[90m 66 |\u001b[39m                 selectedDate\u001b[33m=\u001b[39m{selectedDate}\n \u001b[90m 67 |\u001b[39m                 index\u001b[33m=\u001b[39m{i}\u001b[0m\n\u001b[1mCall Stack\u001b[22m\n\u001b[90m  dateBookings.map$argument_0 (src/components/dayScheduleView.tsx:64:15)\u001b[39m\n\u001b[90m  DayScheduleView (src/components/dayScheduleView.tsx:62:24)\u001b[39m\n\u001b[90m  SitterPage (src/app/SitterPage.tsx:70:12)\u001b[39m\n\u001b[90m  TabLayout (src/app/_layout.tsx:10:9)\u001b[39m"]}
+{"_e":"metro:bundling:started","_t":1783516943210,"id":"a","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:started","_t":1783516943210,"id":"b","platform":"web","environment":"node","entry":"node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js"}
+{"_e":"metro:bundling:started","_t":1783516943243,"id":"c","platform":"web","environment":null,"entry":"src/components/dayScheduleView.tsx"}
+{"_e":"metro:bundling:started","_t":1783516943244,"id":"d","platform":"web","environment":null,"entry":"src/components/bookingBlock.tsx"}
+{"_e":"metro:bundling:done","_t":1783516943275,"id":"b","total":1,"ms":64.681042}
+{"_e":"metro:bundling:started","_t":1783516943436,"id":"e","platform":"web","environment":null,"entry":"src/components/bookingBlock.tsx"}
+{"_e":"metro:bundling:started","_t":1783516943440,"id":"f","platform":"web","environment":null,"entry":"src/components/bookingBlock.tsx"}
+{"_e":"metro:bundling:done","_t":1783516943441,"id":"a","total":1,"ms":230.284625}
+{"_e":"metro:bundling:started","_t":1783516943445,"id":"g","platform":"web","environment":null,"entry":"src/components/bookingBlock.tsx"}
+{"_e":"metro:bundling:started","_t":1783516943446,"id":"h","platform":"web","environment":null,"entry":"src/components/bookingBlock.tsx"}
+{"_e":"metro:bundling:started","_t":1783516943447,"id":"i","platform":"web","environment":null,"entry":"src/components/bookingBlock.tsx"}
+{"_e":"metro:bundling:started","_t":1783516943448,"id":"j","platform":"web","environment":null,"entry":"src/components/bookingBlock.tsx"}
+{"_e":"metro:bundling:started","_t":1783516943449,"id":"k","platform":"web","environment":null,"entry":"src/components/bookingBlock.tsx"}
+{"_e":"metro:bundling:started","_t":1783516943450,"id":"l","platform":"web","environment":null,"entry":"src/components/bookingBlock.tsx"}
+{"_e":"metro:bundling:started","_t":1783516943451,"id":"m","platform":"web","environment":null,"entry":"src/components/bookingBlock.tsx"}
+{"_e":"metro:bundling:started","_t":1783516943452,"id":"n","platform":"web","environment":null,"entry":"src/components/bookingBlock.tsx"}
+{"_e":"metro:bundling:started","_t":1783516980797,"id":"o","platform":"web","environment":null,"entry":"src/components/bookingBlock.tsx"}

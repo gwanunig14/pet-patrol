@@ -1,7 +1,9 @@
 import { Booking } from "@/api/bookings";
-import { atStartOfDay, DAY_MS } from "@/functions/date";
 import { Dimensions, ScrollView, StyleSheet, Text, View } from "react-native";
-import { capitalize } from "./bookingFormView";
+import BookingBlock from "./bookingBlock";
+
+export const HOUR_ROW_HEIGHT = 40;
+export const DAY_VIEW_HEIGHT = 24 * HOUR_ROW_HEIGHT;
 
 export default function DayScheduleView({
   dateBookings,
@@ -39,10 +41,6 @@ export default function DayScheduleView({
     "11 PM",
   ];
 
-  const HOUR_ROW_HEIGHT = 40;
-  const MINUTE_TO_PX = HOUR_ROW_HEIGHT / 60;
-  const DAY_VIEW_HEIGHT = 24 * HOUR_ROW_HEIGHT;
-
   return (
     <View style={[styles.dayView, { maxHeight: SCREEN_HEIGHT - 125 }]}>
       <Text style={styles.currentDate}>
@@ -62,48 +60,13 @@ export default function DayScheduleView({
         </View>
         <View style={[styles.bookingList, { height: DAY_VIEW_HEIGHT }]}>
           {dateBookings?.map((db, i) => {
-            const startTime = new Date(db.startTime);
-            const endTime = new Date(db.endTime);
-            const dayStart = atStartOfDay(selectedDate);
-            const dayEnd = new Date(dayStart.getTime() + DAY_MS);
-
-            const displayStart = new Date(
-              Math.max(startTime.getTime(), dayStart.getTime()),
-            );
-            const displayEnd = new Date(
-              Math.min(endTime.getTime(), dayEnd.getTime()),
-            );
-
-            const displayStartMinutes =
-              displayStart.getHours() * 60 + displayStart.getMinutes();
-            const durationMinutes =
-              (displayEnd.getTime() - displayStart.getTime()) / (60 * 1000);
-
-            let backgroundColor = "green";
-            if (db.status === "Pending") {
-              backgroundColor = "blue";
-            } else if (db.status === "Declined") {
-              backgroundColor = "red";
-            }
-
             return (
-              <View
+              <BookingBlock
+                booking={db}
+                selectedDate={selectedDate}
+                index={i}
                 key={i}
-                style={[
-                  styles.booking,
-                  {
-                    height: durationMinutes * MINUTE_TO_PX,
-                    backgroundColor: backgroundColor,
-                    top: displayStartMinutes * MINUTE_TO_PX,
-                    left: i % 2 === 0 ? 48 : 56,
-                    right: i % 2 === 0 ? 12 : 4,
-                  },
-                ]}
-              >
-                <Text style={styles.petName}>{db.petName}</Text>
-                <Text style={styles.animal}>{capitalize(db.animal)}</Text>
-                <Text style={styles.price}>{`$${db.price}`}</Text>
-              </View>
+              />
             );
           })}
         </View>
@@ -121,14 +84,4 @@ const styles = StyleSheet.create({
   },
   hour: { fontSize: 16 },
   bookingList: { position: "absolute", top: 0, left: 0, right: 0 },
-  booking: {
-    position: "absolute",
-    padding: 8,
-    borderColor: "black",
-    borderWidth: 4,
-    borderRadius: 8,
-  },
-  petName: { color: "white", fontSize: 24, marginBottom: 4 },
-  animal: { color: "white", marginBottom: 4, fontSize: 16 },
-  price: { color: "white", fontSize: 16 },
 });
