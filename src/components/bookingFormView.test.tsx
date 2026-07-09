@@ -34,7 +34,7 @@ describe("BookingForm", () => {
 
     await fireEvent.press(view.getByText("Submit Sitter Request"));
     await waitFor(() => {
-      expect(view.getByText("No Name")).toBeTruthy();
+      expect(view.getByText("Enter your pet's name")).toBeTruthy();
     });
   });
 

@@ -3,20 +3,24 @@ import { render } from "@testing-library/react-native";
 
 describe("BookingBlock", () => {
   test("renders booking summary", async () => {
+    const selectedDate = new Date(2026, 0, 2, 0, 0, 0);
+    const startTime = new Date(2026, 0, 2, 10, 0, 0);
+    const endTime = new Date(2026, 0, 2, 12, 0, 0);
+
     const view = await render(
       <BookingBlock
         booking={{
           id: "1",
           owner: "owner",
           petName: "Nugget",
-          date: new Date("2026-01-02T00:00:00.000Z"),
-          startTime: new Date("2026-01-02T10:00:00.000Z"),
-          endTime: new Date("2026-01-02T12:00:00.000Z"),
+          date: selectedDate,
+          startTime,
+          endTime,
           status: "Pending",
           animal: "dog",
           price: 40,
         }}
-        selectedDate={new Date("2026-01-02T00:00:00.000Z")}
+        selectedDate={selectedDate}
         index={0}
       />,
     );

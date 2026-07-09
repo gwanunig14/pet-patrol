@@ -22,8 +22,14 @@ describe("HomeScreen", () => {
     (getUser as jest.Mock).mockResolvedValue({ name: "owner", password: "pw" });
     const view = await render(<HomeScreen />);
 
-    await fireEvent.changeText(view.getByPlaceholderText("Username"), "owner");
-    await fireEvent.changeText(view.getByPlaceholderText("Password"), "pw");
+    await fireEvent.changeText(
+      view.getByPlaceholderText("Enter your username"),
+      "owner",
+    );
+    await fireEvent.changeText(
+      view.getByPlaceholderText("Enter your password"),
+      "pw",
+    );
     await fireEvent.press(view.getByText("Log In"));
 
     await waitFor(() => {
@@ -42,8 +48,14 @@ describe("HomeScreen", () => {
     });
     const view = await render(<HomeScreen />);
 
-    await fireEvent.changeText(view.getByPlaceholderText("Username"), "sitter");
-    await fireEvent.changeText(view.getByPlaceholderText("Password"), "pw");
+    await fireEvent.changeText(
+      view.getByPlaceholderText("Enter your username"),
+      "sitter",
+    );
+    await fireEvent.changeText(
+      view.getByPlaceholderText("Enter your password"),
+      "pw",
+    );
     await fireEvent.press(view.getByText("Log In"));
 
     await waitFor(() => {

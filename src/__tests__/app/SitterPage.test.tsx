@@ -1,11 +1,13 @@
 import SitterPage from "@/app/SitterPage";
 import { getBookings } from "@/api/bookings";
+import { useAuth } from "@/context/auth-context";
 import { render, waitFor } from "@testing-library/react-native";
 
 jest.mock("@/api/bookings", () => ({
   getBookings: jest.fn(),
   updateBookingStatus: jest.fn(),
 }));
+jest.mock("@/context/auth-context", () => ({ useAuth: jest.fn() }));
 
 const mockPendingSpy = jest.fn();
 
@@ -34,6 +36,9 @@ jest.mock("@/components/pendingBookingsView", () => (props: any) => {
 describe("SitterPage", () => {
   beforeEach(() => {
     jest.clearAllMocks();
+    (useAuth as jest.Mock).mockReturnValue({
+      currentUser: { name: "sitter1" },
+    });
     (getBookings as jest.Mock).mockResolvedValue([
       {
         id: "1",
