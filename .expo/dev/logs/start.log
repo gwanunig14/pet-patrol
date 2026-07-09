@@ -419,3 +419,41 @@
 {"_e":"metro:client_log","_t":1783518195743,"level":"info","data":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"]}
 {"_e":"metro:client_log","_t":1783518195744,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
 {"_e":"metro:client_log","_t":1783518195747,"level":"warn","data":["Require cycle: src/components/dayScheduleView.tsx -> src/components/bookingBlock.tsx -> src/components/dayScheduleView.tsx\n\nRequire cycles are allowed, but can result in uninitialized values. Consider refactoring to remove the need for a cycle."]}
+{"_e":"root:init","_t":1783538891474,"format":"v0-jsonl","version":"57.0.6"}
+{"_e":"env:mode","_t":1783538891475,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1783538891476,"mode":"development","files":["../../../.env.local"],"env":{"EXPO_PUBLIC_API_URL":"http://localhost:3001"}}
+{"_e":"devserver:start","_t":1783538891947,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../src/app","serverComponents":false,"serverActions":false,"serverRendering":true,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1783538892131,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":true,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1783538892216,"plugins":[]}
+{"_e":"metro:instantiate","_t":1783538892547,"atlas":false,"workers":8,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1783538948546,"id":"2","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:started","_t":1783538948547,"id":"3","platform":"web","environment":"node","entry":"node_modules/expo/node_modules/@expo/cli/node_modules/@expo/router-server/node/render.js"}
+{"_e":"metro:bundling:done","_t":1783538948997,"id":"3","total":779,"ms":449.882125}
+{"_e":"metro:bundling:done","_t":1783538949165,"id":"2","total":862,"ms":619.067875}
+{"_e":"metro:bundling:started","_t":1783538949181,"id":"4","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:done","_t":1783538949310,"id":"4","total":815,"ms":128.753917}
+{"_e":"metro:client_log","_t":1783538949431,"level":"info","data":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"]}
+{"_e":"metro:client_log","_t":1783538949432,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1783538949436,"level":"warn","data":["Require cycle: src/components/dayScheduleView.tsx -> src/components/bookingBlock.tsx -> src/components/dayScheduleView.tsx\n\nRequire cycles are allowed, but can result in uninitialized values. Consider refactoring to remove the need for a cycle."]}
+{"_e":"root:init","_t":1783539020545,"format":"v0-jsonl","version":"57.0.6"}
+{"_e":"env:mode","_t":1783539020545,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1783539020547,"mode":"development","files":["../../../.env.local"],"env":{"EXPO_PUBLIC_API_URL":"http://localhost:3001"}}
+{"_e":"devserver:start","_t":1783539020991,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../src/app","serverComponents":false,"serverActions":false,"serverRendering":true,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1783539021164,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":true,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1783539021249,"plugins":[]}
+{"_e":"metro:instantiate","_t":1783539021562,"atlas":false,"workers":8,"host":"::","port":8081}
+{"_e":"metro:client_log","_t":1783539029248,"level":"error","data":["Project is incompatible with this version of Expo Go\n\nThe project you requested requires a newer version of Expo Go.\n\nHow to fix this error:\n\nDownload the latest version of Expo Go from the App Store."]}
+{"_e":"root:init","_t":1783539163572,"format":"v0-jsonl","version":"57.0.6"}
+{"_e":"env:mode","_t":1783539163573,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1783539163575,"mode":"development","files":["../../../.env.local"],"env":{"EXPO_PUBLIC_API_URL":"http://localhost:3001"}}
+{"_e":"devserver:start","_t":1783539164044,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../src/app","serverComponents":false,"serverActions":false,"serverRendering":true,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1783539164226,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":true,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1783539164314,"plugins":[]}
+{"_e":"metro:instantiate","_t":1783539164657,"atlas":false,"workers":8,"host":"::","port":8081}
+{"_e":"root:init","_t":1783599624003,"format":"v0-jsonl","version":"57.0.6"}
+{"_e":"env:mode","_t":1783599624004,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1783599624006,"mode":"development","files":["../../../.env.local"],"env":{"EXPO_PUBLIC_API_URL":"http://localhost:3001"}}
+{"_e":"devserver:start","_t":1783599624486,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../../../src/app","serverComponents":false,"serverActions":false,"serverRendering":true,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1783599624670,"serverRoot":"../../..","projectRoot":"../../..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":true,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"expo:dev-tools-plugin:load","_t":1783599624770,"plugins":[]}
+{"_e":"metro:instantiate","_t":1783599625124,"atlas":false,"workers":8,"host":"::","port":8081}

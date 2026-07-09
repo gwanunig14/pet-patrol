@@ -70,7 +70,6 @@ describe("SitterPage", () => {
             expect.objectContaining({ status: "Pending" }),
           ]),
         }),
-        expect.anything(),
       );
     });
   });

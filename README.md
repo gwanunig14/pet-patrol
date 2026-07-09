@@ -1,19 +1,74 @@
-# Welcome to your Expo app 👋
+# Pet Patrol
 
-The plan is a local api that is updateable for the sake of scheduling.
-Some aspects will be hardcoded and unchangeable in the interface. These will be the pet options, the pricing, and the two users (sitter and owner because this isn't a production app, and I'd like to take advantage of my freedom and break out of the boring conventions of client and admin)
-The following is my process in order
+Pet Patrol is a small Expo app for pet-sitting bookings. It has two roles:
 
-1. Building a simple login page. Just a text field and a button.
-2. Build simple api so login accomplishes something. Consulted ChatGPT for the best way to set up a functional, local api.
-3. build and navigate to the owner view. Used Copilot for the cross app user information to save time. Set up the ability to fetch and submit bookings attached to the current user. Initially tried a date picker with two calenders for a start and end date, went down a long, unnecessary road. Settled on a much simpler solution. Used AI to clean up all the crap that I'd put in trying to get the calendar to work right. Things are much better now. The simpler idea was not AI's however. I merely used it to save myself at least and hour since I'd already wasted 2 on a bad idea.
-4. Fetch and display user's bookings.
-5. Owner page. I want it to list the bookings in a schedule format. Will use AI to generate a bunch of potential bookings just to give more datea to work with. AI was used for the date logic because that just gets confusing.
-6. Need to make everything pretty but first, Expo build creates a lot of files that I'm not using. So I'm going to tell AI to get rid of all of them.
-7. I'm going to go through and simplifying the code.
-8. Time to make the log in view presentable
-9. Now for the Owner view
-10. Sitter view
-11. All done
-12. Had an idea to improve the scheduling view.
-13. Crap. I forgot the tests
+- Owner: log in, create bookings, and see your appointments
+- Sitter: review upcoming bookings and manage them by date
+
+The app uses a local JSON Server API for data, so it is meant to run on your machine.
+
+## Quick Start
+
+1. Install dependencies.
+
+```bash
+npm install
+```
+
+2. Make sure the app can talk to the local API.
+
+Create a `.env` file in the project root if you do not already have one, and set:
+
+```bash
+EXPO_PUBLIC_API_URL=http://localhost:3001
+```
+
+3. Start the API and the Expo app together.
+
+```bash
+npm run dev
+```
+
+4. Open the app in Expo Go, the simulator, or the browser.
+
+If you prefer to run them separately:
+
+```bash
+npm run api
+npm start
+```
+
+## Other Useful Commands
+
+```bash
+npm run ios
+npm run android
+npm run web
+npm test
+```
+
+## Project Story
+
+This started as a simple local scheduling app with a few intentional limits. The pet options, pricing, and the two users are hardcoded because this is not a production app, and that keeps the focus on the booking flow instead of account management.
+
+The build happened in a rough sequence:
+
+1. Build a simple login page with a text field and a button.
+2. Set up a local API so login actually does something.
+3. Build and navigate to the owner view, then fetch and submit bookings for the current user.
+4. Fetch and display the user's bookings.
+5. Build the owner schedule view and generate enough bookings to make it useful.
+6. Clean up the Expo starter files that were not being used.
+7. Simplify the code.
+8. Make the login view presentable.
+9. Improve the owner view.
+10. Build the sitter view.
+11. Finish the first pass.
+12. Improve the scheduling view.
+13. Add the tests I almost forgot.
+
+## Notes
+
+- The API data lives in `api/db.json`.
+- The app expects `EXPO_PUBLIC_API_URL` to point at the local API server.
+- The test files live in `src/__tests__/app/` so they do not conflict with Expo Router routes.

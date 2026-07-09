@@ -1,10 +1,8 @@
 import OwnerView from "@/app/OwnerPage";
-import { getBookingsByUser } from "@/api/bookings";
 import { useAuth } from "@/context/auth-context";
-import { render, waitFor } from "@testing-library/react-native";
+import { render } from "@testing-library/react-native";
 import { useRouter } from "expo-router";
 
-jest.mock("@/api/bookings", () => ({ getBookingsByUser: jest.fn() }));
 jest.mock("@/context/auth-context", () => ({ useAuth: jest.fn() }));
 jest.mock("expo-router", () => ({ useRouter: jest.fn() }));
 jest.mock("@/components/appointmentView", () => {
@@ -29,7 +27,6 @@ describe("OwnerPage", () => {
   beforeEach(() => {
     jest.clearAllMocks();
     (useRouter as jest.Mock).mockReturnValue({ replace });
-    (getBookingsByUser as jest.Mock).mockResolvedValue([]);
   });
 
   test("redirects to login when user is missing", async () => {
@@ -45,9 +42,5 @@ describe("OwnerPage", () => {
     expect(view.getByText("header")).toBeTruthy();
     expect(view.getByText("appointments")).toBeTruthy();
     expect(view.getByText("booking-form")).toBeTruthy();
-
-    await waitFor(() => {
-      expect(getBookingsByUser).toHaveBeenCalledWith("owner");
-    });
   });
 });

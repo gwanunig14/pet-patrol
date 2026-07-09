@@ -1,10 +1,8 @@
-import { Booking, getBookingsByUser } from "@/api/bookings";
 import AppointmentView from "@/components/appointmentView";
 import BookingForm from "@/components/bookingFormView";
 import HeaderView from "@/components/headerView";
 import { useAuth } from "@/context/auth-context";
 import { useRouter } from "expo-router";
-import { useEffect, useState } from "react";
 import { StyleSheet, View } from "react-native";
 
 export default function OwnerView() {
@@ -15,19 +13,6 @@ export default function OwnerView() {
     router.replace("/");
     return;
   }
-
-  const [bookings, setBookings] = useState<Booking[] | null>(null);
-
-  useEffect(() => {
-    if (!bookings) {
-      const fetchBookings = async () => {
-        const userBookings = await getBookingsByUser(currentUser?.name);
-        setBookings(userBookings);
-      };
-
-      fetchBookings();
-    }
-  });
 
   return (
     <View>
